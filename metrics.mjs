@@ -1,4 +1,4 @@
-export const VERSION = '1.1.0-preview';
+export const VERSION = '1.2.0-shape-preview';
 export function measureShape(raw, scale = 1) {
   const ratio = raw.major / Math.max(raw.minor, 1e-9);
   return {area: raw.area*scale*scale, perimeter: raw.perimeter*scale, major:raw.major*scale,
