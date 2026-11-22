@@ -1,11 +1,10 @@
-export const VERSION = '1.2.0-shape-preview';
+export const VERSION = '1.3.0-sample-analysis';
 export function measureShape(raw, scale = 1) {
   const ratio = raw.major / Math.max(raw.minor, 1e-9);
   return {area: raw.area*scale*scale, perimeter: raw.perimeter*scale, major:raw.major*scale,
     minor:raw.minor*scale, equivalentDiameter:Math.sqrt(4*raw.area/Math.PI)*scale,
     aspectRatio:ratio, circularity:Math.min(1,4*Math.PI*raw.area/Math.max(raw.perimeter**2,1e-9)),
-    solidity:Math.min(1,raw.area/Math.max(raw.hullArea,1e-9)),
-    elongation:ratio<1.5?'近等轴':ratio<3?'一般伸长':'高度伸长'};
+    solidity:Math.min(1,raw.area/Math.max(raw.hullArea,1e-9))};
 }
 export function escapeCSV(value) {
   let s=String(value??''); if (/^[=+\-@\t\r]/.test(s)) s="'"+s;

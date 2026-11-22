@@ -1,2 +1,5 @@
-# grain-scope-refined
-颗粒形态分析工作台
+# GrainScope 1.3
+
+本地二维颗粒测量与样品长宽比统计。详见使用与GitHub更新说明.txt。
+
+CSV仅包含已人工复核、未排除且指标有效的颗粒。
